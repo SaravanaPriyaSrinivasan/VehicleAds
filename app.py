@@ -86,7 +86,7 @@ data['model_year'] = data['model_year'].dropna().astype(int)
 data['cylinders'] = data['cylinders'].dropna().astype(int)
 
 # Store data without outliers in a separate DataFrame
-data_filtered = data[(data['price'].between(1000, 50000)) & (data['model_year'] > 1990) & (data['odometer'] < 600000) &
+data_filtered = data[(data['price'].between(1000, 50000)) & (data['model_year'] > 1990) & (data['odometer'] < 400000) &
                      (((data['condition'] == 'new') & (data['odometer'] > 5)) | 
                       ((data['condition'] != 'new') & (data['odometer'] > 100)))].copy()
 
